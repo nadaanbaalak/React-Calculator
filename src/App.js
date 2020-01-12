@@ -1,5 +1,5 @@
 import React from 'react';
-//import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom';
 import './App.css';
 import DisplayComponent from './components/displayComponent';
 import KeypadComponent from "./components/keypadComponent";
@@ -37,7 +37,7 @@ class App extends React.Component {
                 else
                     this.setState({prevKey:"",result:button})          
             }
-            else if((this.state.prevKey==="+" || this.state.prevKey==="+" || this.state.prevKey==="+" || this.state.prevKey==="+") && button==="0"){
+            else if((this.state.prevKey==="+" || this.state.prevKey==="*" || this.state.prevKey==="-" || this.state.prevKey==="/") && button==="0"){
                 this.setState({result: this.state.result})
             }
             else {
